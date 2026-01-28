@@ -31,12 +31,19 @@ const HeroSection = () => {
       <div className="relative z-10 container-custom section-padding text-center">
         <div className="max-w-4xl mx-auto animate-fade-in-up">
           {/* Logo */}
-          <div className="mb-8">
+          <div className="mb-6">
             <img
               src={logo}
               alt="Kamex Trucking LLC"
               className="h-20 md:h-28 mx-auto object-contain"
             />
+          </div>
+
+          {/* Slogan Badge */}
+          <div className="inline-block mb-6">
+            <span className="px-4 py-2 bg-accent/90 text-accent-foreground text-sm md:text-base font-semibold rounded-full shadow-lg">
+              {t('hero.slogan')}
+            </span>
           </div>
 
           {/* Headline */}
