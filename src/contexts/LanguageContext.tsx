@@ -36,6 +36,15 @@ const translations: Record<Language, Record<string, string>> = {
     'about.stat2.label': 'Dispatch Oversight',
     'about.stat3.value': '100%',
     'about.stat3.label': 'Compliance Rate',
+    'about.values.title': 'Our Core Values',
+    'about.values.reliability.title': 'Reliability',
+    'about.values.reliability.desc': 'We deliver on our promises, every time. Our partners count on us for consistent, dependable service.',
+    'about.values.family.title': 'Family Values',
+    'about.values.family.desc': 'As a family-owned business, we treat every client and team member like family.',
+    'about.values.excellence.title': 'Excellence',
+    'about.values.excellence.desc': 'We strive for excellence in every delivery, maintaining the highest standards of service.',
+    'about.fleet.title': 'Our Fleet',
+    'about.fleet.description': 'Our fleet of 26-foot box trucks is equipped with the latest technology and maintained to the highest standards for reliable service.',
     
     // Services
     'services.title': 'Our Services',
@@ -52,24 +61,31 @@ const translations: Record<Language, Record<string, string>> = {
     'services.warehouse.desc': 'Streamlined warehouse-to-destination logistics for optimal supply chain management.',
     'services.dedicated.title': 'Dedicated Routes',
     'services.dedicated.desc': 'Custom dedicated route services tailored to your specific business requirements.',
+    'services.cta.title': 'Ready to Optimize Your Logistics?',
+    'services.cta.description': 'Contact us today to discuss how we can support your delivery needs with our reliable transportation solutions.',
+    'services.cta.button': 'Get Started Today',
     
     // Portfolio
     'portfolio.title': 'Our Fleet',
     'portfolio.subtitle': 'Modern Equipment for Reliable Service',
     'portfolio.desc': 'Our well-maintained fleet of 26-foot box trucks ensures safe and efficient transportation of your goods.',
+    'portfolio.gallery.title': 'Fleet Gallery',
+    'portfolio.equipment.title': 'Equipment Specifications',
+    'portfolio.equipment.description': 'Our 26-foot box trucks are equipped with lift gates, GPS tracking, and climate control options to meet diverse transportation needs.',
     
     // Contact
     'contact.title': 'Contact Us',
     'contact.subtitle': 'Ready to Get Started?',
-    'contact.description': 'Get in touch with our team to discuss your logistics needs. We\'re here to help you find the perfect transportation solution.',
+    'contact.description': "Get in touch with our team to discuss your logistics needs. We're here to help you find the perfect transportation solution.",
+    'contact.form.title': 'Send Us a Message',
     'contact.name': 'Full Name',
     'contact.email': 'Email Address',
     'contact.phone': 'Phone Number',
     'contact.company': 'Company Name',
     'contact.message': 'Your Message',
     'contact.submit': 'Send Message',
-    'contact.address': 'Manhattan, New York',
-    'contact.available': 'Available 24/7',
+    'contact.address': 'Address',
+    'contact.available': 'Availability',
     
     // Footer
     'footer.tagline': 'Professional trucking and logistics services for private and government contracts.',
@@ -104,6 +120,15 @@ const translations: Record<Language, Record<string, string>> = {
     'about.stat2.label': 'Supervisión de Despacho',
     'about.stat3.value': '100%',
     'about.stat3.label': 'Tasa de Cumplimiento',
+    'about.values.title': 'Nuestros Valores',
+    'about.values.reliability.title': 'Confiabilidad',
+    'about.values.reliability.desc': 'Cumplimos nuestras promesas, siempre. Nuestros socios cuentan con nosotros para un servicio consistente y confiable.',
+    'about.values.family.title': 'Valores Familiares',
+    'about.values.family.desc': 'Como empresa familiar, tratamos a cada cliente y miembro del equipo como familia.',
+    'about.values.excellence.title': 'Excelencia',
+    'about.values.excellence.desc': 'Nos esforzamos por la excelencia en cada entrega, manteniendo los más altos estándares de servicio.',
+    'about.fleet.title': 'Nuestra Flota',
+    'about.fleet.description': 'Nuestra flota de camiones de 26 pies está equipada con la última tecnología y mantenida con los más altos estándares para un servicio confiable.',
     
     // Services
     'services.title': 'Nuestros Servicios',
@@ -120,24 +145,31 @@ const translations: Record<Language, Record<string, string>> = {
     'services.warehouse.desc': 'Logística optimizada de almacén a destino para una gestión óptima de la cadena de suministro.',
     'services.dedicated.title': 'Rutas Dedicadas',
     'services.dedicated.desc': 'Servicios de rutas dedicadas personalizadas según sus requisitos comerciales específicos.',
+    'services.cta.title': '¿Listo para Optimizar tu Logística?',
+    'services.cta.description': 'Contáctanos hoy para discutir cómo podemos apoyar tus necesidades de entrega con nuestras soluciones de transporte confiables.',
+    'services.cta.button': 'Comenzar Hoy',
     
     // Portfolio
     'portfolio.title': 'Nuestra Flota',
     'portfolio.subtitle': 'Equipos Modernos para un Servicio Confiable',
     'portfolio.desc': 'Nuestra flota bien mantenida de camiones de 26 pies garantiza el transporte seguro y eficiente de sus mercancías.',
+    'portfolio.gallery.title': 'Galería de Flota',
+    'portfolio.equipment.title': 'Especificaciones del Equipo',
+    'portfolio.equipment.description': 'Nuestros camiones de 26 pies están equipados con plataformas elevadoras, rastreo GPS y opciones de control climático para satisfacer diversas necesidades de transporte.',
     
     // Contact
     'contact.title': 'Contáctenos',
     'contact.subtitle': '¿Listo para Comenzar?',
     'contact.description': 'Póngase en contacto con nuestro equipo para discutir sus necesidades logísticas. Estamos aquí para ayudarle a encontrar la solución de transporte perfecta.',
+    'contact.form.title': 'Envíenos un Mensaje',
     'contact.name': 'Nombre Completo',
     'contact.email': 'Correo Electrónico',
     'contact.phone': 'Número de Teléfono',
     'contact.company': 'Nombre de la Empresa',
     'contact.message': 'Su Mensaje',
     'contact.submit': 'Enviar Mensaje',
-    'contact.address': 'Manhattan, Nueva York',
-    'contact.available': 'Disponible 24/7',
+    'contact.address': 'Dirección',
+    'contact.available': 'Disponibilidad',
     
     // Footer
     'footer.tagline': 'Servicios profesionales de transporte y logística para contratos privados y gubernamentales.',

@@ -1,26 +1,19 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import heroDriver from '@/assets/hero-driver.jpg';
-import logo from '@/assets/logo.jpeg';
+import heroHome from '@/assets/hero-home.png';
+import logo from '@/assets/kamex-logo.png';
 import { ArrowRight, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const { t } = useLanguage();
-
-  const scrollToServices = () => {
-    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src={heroDriver}
+          src={heroHome}
           alt="Professional truck driver with Kamex Trucking fleet"
           className="w-full h-full object-cover"
         />
@@ -61,18 +54,20 @@ const HeroSection = () => {
             <Button
               variant="hero"
               size="lg"
-              onClick={scrollToContact}
               className="group"
+              asChild
             >
-              {t('hero.cta')}
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              <Link to="/contact">
+                {t('hero.cta')}
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
             </Button>
             <Button
               variant="heroOutline"
               size="lg"
-              onClick={scrollToServices}
+              asChild
             >
-              {t('hero.secondary')}
+              <Link to="/services">{t('hero.secondary')}</Link>
             </Button>
           </div>
         </div>
