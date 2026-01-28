@@ -19,22 +19,23 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.quote': 'Get a Quote',
     
     // Hero
-    'hero.title': 'Your Trusted Partner in Logistics & Distribution',
-    'hero.subtitle': 'Professional trucking services for private and government contracts. Reliable, efficient, and on-time delivery across the nation.',
+    'hero.slogan': 'Reliable Local Freight. Delivered Right.',
+    'hero.title': 'Powering Local Deliveries for Leading Brands',
+    'hero.subtitle': 'Supporting Major Partners with Reliable Local Delivery. Professional trucking services for private and government contracts.',
     'hero.cta': 'Request a Quote',
     'hero.secondary': 'Our Services',
     
     // About
     'about.title': 'About Kamex Trucking',
-    'about.subtitle': 'Delivering Excellence Since Day One',
-    'about.description': 'Kamex Trucking LLC is a professional logistics and distribution company based in Manhattan, New York. We specialize in general contracting services with a fleet of 26-foot box trucks designed for efficient freight transportation.',
-    'about.mission': 'Our mission is to provide reliable, safe, and cost-effective transportation solutions for both private enterprises and government agencies.',
-    'about.stat1.value': '100+',
-    'about.stat1.label': 'Successful Deliveries',
+    'about.subtitle': 'Family-Owned. 15+ Years of Excellence.',
+    'about.description': 'We are a family-owned logistics provider with 15+ years of experience delivering contracted freight services throughout metropolitan and regional markets. Our organization has a proven history of successfully fulfilling contractual delivery obligations for enterprise-level partners, meeting performance, safety, and compliance benchmarks.',
+    'about.mission': 'Our operational model emphasizes real-time dispatch oversight, regulatory compliance, and zone-based route control to ensure predictable outcomes and measurable service reliability. We support our partners with consistent execution, transparent communication, and scalable delivery solutions.',
+    'about.stat1.value': '15+',
+    'about.stat1.label': 'Years Experience',
     'about.stat2.value': '24/7',
-    'about.stat2.label': 'Support Available',
+    'about.stat2.label': 'Dispatch Oversight',
     'about.stat3.value': '100%',
-    'about.stat3.label': 'On-Time Rate',
+    'about.stat3.label': 'Compliance Rate',
     
     // Services
     'services.title': 'Our Services',
@@ -86,22 +87,23 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.quote': 'Cotización',
     
     // Hero
-    'hero.title': 'Su Socio de Confianza en Logística y Distribución',
-    'hero.subtitle': 'Servicios profesionales de transporte para contratos privados y gubernamentales. Entregas confiables, eficientes y puntuales en todo el país.',
+    'hero.slogan': 'Carga Local Confiable. Entregada Correctamente.',
+    'hero.title': 'Impulsando Entregas Locales para Marcas Líderes',
+    'hero.subtitle': 'Apoyando a Grandes Socios con Entregas Locales Confiables. Servicios profesionales de transporte para contratos privados y gubernamentales.',
     'hero.cta': 'Solicitar Cotización',
     'hero.secondary': 'Nuestros Servicios',
     
     // About
     'about.title': 'Sobre Kamex Trucking',
-    'about.subtitle': 'Excelencia en Cada Entrega',
-    'about.description': 'Kamex Trucking LLC es una empresa profesional de logística y distribución con sede en Manhattan, Nueva York. Nos especializamos en servicios de contratación general con una flota de camiones de cajón de 26 pies diseñados para el transporte eficiente de carga.',
-    'about.mission': 'Nuestra misión es proporcionar soluciones de transporte confiables, seguras y rentables tanto para empresas privadas como para agencias gubernamentales.',
-    'about.stat1.value': '100+',
-    'about.stat1.label': 'Entregas Exitosas',
+    'about.subtitle': 'Empresa Familiar. 15+ Años de Excelencia.',
+    'about.description': 'Somos un proveedor de logística familiar con más de 15 años de experiencia entregando servicios de carga contratados en mercados metropolitanos y regionales. Nuestra organización tiene un historial comprobado de cumplimiento exitoso de obligaciones de entrega contractuales para socios de nivel empresarial, cumpliendo con estándares de rendimiento, seguridad y cumplimiento.',
+    'about.mission': 'Nuestro modelo operativo enfatiza la supervisión de despacho en tiempo real, el cumplimiento normativo y el control de rutas por zonas para garantizar resultados predecibles y una confiabilidad de servicio medible. Apoyamos a nuestros socios con ejecución consistente, comunicación transparente y soluciones de entrega escalables.',
+    'about.stat1.value': '15+',
+    'about.stat1.label': 'Años de Experiencia',
     'about.stat2.value': '24/7',
-    'about.stat2.label': 'Soporte Disponible',
+    'about.stat2.label': 'Supervisión de Despacho',
     'about.stat3.value': '100%',
-    'about.stat3.label': 'Tasa de Puntualidad',
+    'about.stat3.label': 'Tasa de Cumplimiento',
     
     // Services
     'services.title': 'Nuestros Servicios',
