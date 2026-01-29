@@ -23,12 +23,12 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container-custom section-padding text-center">
         <div className="max-w-4xl mx-auto animate-fade-in-up">
-          {/* Logo */}
+          {/* Logo with luxury glow effect */}
           <div className="mb-6">
             <img
               src={logo}
               alt="Kamex Trucking LLC"
-              className="h-20 md:h-28 mx-auto object-contain"
+              className="h-20 md:h-28 mx-auto object-contain drop-shadow-[0_0_25px_rgba(250,204,21,0.6)] animate-[pulse_3s_ease-in-out_infinite]"
             />
           </div>
 
