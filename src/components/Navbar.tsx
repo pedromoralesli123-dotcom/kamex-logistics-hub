@@ -33,7 +33,7 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || !isHomePage
-          ? 'bg-card/95 backdrop-blur-md shadow-lg'
+          ? 'bg-white/95 backdrop-blur-md shadow-lg'
           : 'bg-transparent'
       }`}
     >
@@ -54,12 +54,12 @@ const Navbar = () => {
               <Link
                 key={link.key}
                 to={link.href}
-                className={`font-medium transition-colors hover:text-primary ${
+                className={`font-medium transition-colors hover:text-blue-700 ${
                   location.pathname === link.href
-                    ? 'text-primary'
+                    ? 'text-blue-700'
                     : isScrolled || !isHomePage
-                    ? 'text-foreground'
-                    : 'text-primary-foreground'
+                    ? 'text-slate-800'
+                    : 'text-white'
                 }`}
               >
                 {t(link.key)}
@@ -74,8 +74,8 @@ const Navbar = () => {
               onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
               className={`flex items-center gap-2 px-3 py-2 rounded-md transition-colors ${
                 isScrolled || !isHomePage
-                  ? 'text-foreground hover:bg-muted'
-                  : 'text-primary-foreground hover:bg-primary-foreground/10'
+                  ? 'text-slate-800 hover:bg-gray-100'
+                  : 'text-white hover:bg-white/10'
               }`}
             >
               <Globe className="h-4 w-4" />
@@ -94,7 +94,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`lg:hidden p-2 ${
-              isScrolled || !isHomePage ? 'text-foreground' : 'text-primary-foreground'
+              isScrolled || !isHomePage ? 'text-slate-800' : 'text-white'
             }`}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -103,24 +103,24 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-card border-t border-border animate-fade-in">
+          <div className="lg:hidden bg-white border-t border-gray-200 animate-fade-in">
             <div className="py-4 space-y-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.key}
                   to={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block w-full text-left px-4 py-3 hover:bg-muted transition-colors font-medium ${
-                    location.pathname === link.href ? 'text-primary' : 'text-foreground'
+                  className={`block w-full text-left px-4 py-3 hover:bg-gray-100 transition-colors font-medium ${
+                    location.pathname === link.href ? 'text-blue-700' : 'text-slate-800'
                   }`}
                 >
                   {t(link.key)}
                 </Link>
               ))}
-              <div className="flex items-center justify-between px-4 pt-4 border-t border-border">
+              <div className="flex items-center justify-between px-4 pt-4 border-t border-gray-200">
                 <button
                   onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
-                  className="flex items-center gap-2 text-muted-foreground"
+                  className="flex items-center gap-2 text-slate-600"
                 >
                   <Globe className="h-4 w-4" />
                   <span className="font-medium uppercase">{language === 'en' ? 'Español' : 'English'}</span>

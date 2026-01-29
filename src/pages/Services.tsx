@@ -48,10 +48,10 @@ const Services = () => {
   return (
     <div className="pt-20">
       {/* Hero Banner */}
-      <section className="relative py-20 bg-primary">
+      <section className="relative py-20 bg-blue-700">
         <div className="container-custom">
-          <div className="text-center text-primary-foreground">
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+          <div className="text-center text-white">
+            <span className="text-yellow-400 font-semibold text-sm uppercase tracking-wider">
               {t('services.subtitle')}
             </span>
             <h1 className="text-4xl md:text-5xl font-heading font-bold mt-2">
@@ -62,27 +62,27 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-slate-50">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group p-8 bg-card rounded-2xl card-shadow hover:card-shadow-hover transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-primary/20"
+                className="group p-8 bg-white rounded-2xl card-shadow hover:card-shadow-hover transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-blue-700/20"
               >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                  <service.icon className="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors" />
+                <div className="w-14 h-14 rounded-xl bg-blue-700/10 flex items-center justify-center mb-6 group-hover:bg-blue-700 transition-colors">
+                  <service.icon className="h-7 w-7 text-blue-700 group-hover:text-white transition-colors" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-foreground mb-3">
+                <h3 className="text-xl font-heading font-bold text-slate-800 mb-3">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-slate-600 leading-relaxed mb-6">
                   {service.description}
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                    <li key={idx} className="flex items-center gap-2 text-sm text-slate-600">
+                      <CheckCircle className="h-4 w-4 text-blue-700 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -94,13 +94,13 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-muted">
+      <section className="section-padding bg-gray-100">
         <div className="container-custom">
-          <div className="bg-primary rounded-2xl p-8 md:p-12 text-center">
-            <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary-foreground mb-4">
+          <div className="bg-blue-700 rounded-2xl p-8 md:p-12 text-center">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">
               {t('services.cta.title')}
             </h2>
-            <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
+            <p className="text-white/80 max-w-2xl mx-auto mb-8">
               {t('services.cta.description')}
             </p>
             <Button variant="hero" size="lg" asChild>
