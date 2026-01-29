@@ -34,18 +34,18 @@ const HeroSection = () => {
 
           {/* Slogan Badge */}
           <div className="inline-block mb-6">
-            <span className="px-4 py-2 bg-accent/90 text-accent-foreground text-sm md:text-base font-semibold rounded-full shadow-lg">
+            <span className="px-4 py-2 bg-yellow-400/90 text-slate-800 text-sm md:text-base font-semibold rounded-full shadow-lg">
               {t('hero.slogan')}
             </span>
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
             {t('hero.title')}
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-primary-foreground/90 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
             {t('hero.subtitle')}
           </p>
 
@@ -74,7 +74,7 @@ const HeroSection = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ChevronDown className="h-8 w-8 text-primary-foreground/70" />
+          <ChevronDown className="h-8 w-8 text-white/70" />
         </div>
       </div>
     </section>

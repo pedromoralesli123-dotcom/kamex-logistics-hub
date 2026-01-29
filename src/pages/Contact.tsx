@@ -52,16 +52,16 @@ const Contact = () => {
   return (
     <div className="pt-20">
       {/* Hero Banner */}
-      <section className="relative py-20 bg-primary">
+      <section className="relative py-20 bg-blue-700">
         <div className="container-custom">
-          <div className="text-center text-primary-foreground">
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+          <div className="text-center text-white">
+            <span className="text-yellow-400 font-semibold text-sm uppercase tracking-wider">
               {t('contact.subtitle')}
             </span>
             <h1 className="text-4xl md:text-5xl font-heading font-bold mt-2">
               {t('contact.title')}
             </h1>
-            <p className="text-primary-foreground/80 text-lg mt-4 max-w-2xl mx-auto">
+            <p className="text-white/80 text-lg mt-4 max-w-2xl mx-auto">
               {t('contact.description')}
             </p>
           </div>
@@ -69,69 +69,69 @@ const Contact = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-slate-50">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Contact Form */}
-            <div className="bg-card p-8 md:p-10 rounded-2xl card-shadow">
-              <h2 className="text-2xl font-heading font-bold text-foreground mb-6">
+            <div className="bg-white p-8 md:p-10 rounded-2xl card-shadow">
+              <h2 className="text-2xl font-heading font-bold text-slate-800 mb-6">
                 {t('contact.form.title')}
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+                    <label className="block text-sm font-medium text-slate-800 mb-2">
                       {t('contact.name')} *
                     </label>
                     <Input
                       type="text"
                       required
                       placeholder="John Doe"
-                      className="h-12"
+                      className="h-12 border-gray-200 focus:border-blue-700 focus:ring-blue-700"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+                    <label className="block text-sm font-medium text-slate-800 mb-2">
                       {t('contact.email')} *
                     </label>
                     <Input
                       type="email"
                       required
                       placeholder="john@company.com"
-                      className="h-12"
+                      className="h-12 border-gray-200 focus:border-blue-700 focus:ring-blue-700"
                     />
                   </div>
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+                    <label className="block text-sm font-medium text-slate-800 mb-2">
                       {t('contact.phone')}
                     </label>
                     <Input
                       type="tel"
                       placeholder="+1 (555) 000-0000"
-                      className="h-12"
+                      className="h-12 border-gray-200 focus:border-blue-700 focus:ring-blue-700"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+                    <label className="block text-sm font-medium text-slate-800 mb-2">
                       {t('contact.company')}
                     </label>
                     <Input
                       type="text"
                       placeholder="Company Inc."
-                      className="h-12"
+                      className="h-12 border-gray-200 focus:border-blue-700 focus:ring-blue-700"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
+                  <label className="block text-sm font-medium text-slate-800 mb-2">
                     {t('contact.message')} *
                   </label>
                   <Textarea
                     required
                     placeholder="Tell us about your logistics needs..."
-                    className="min-h-[150px] resize-none"
+                    className="min-h-[150px] resize-none border-gray-200 focus:border-blue-700 focus:ring-blue-700"
                   />
                 </div>
                 <Button
@@ -153,14 +153,14 @@ const Contact = () => {
                 {contactInfo.map((info, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-4 p-4 bg-muted rounded-xl hover:bg-primary/5 transition-colors"
+                    className="flex items-start gap-4 p-4 bg-gray-100 rounded-xl hover:bg-blue-700/5 transition-colors"
                   >
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <info.icon className="h-6 w-6 text-primary" />
+                    <div className="w-12 h-12 rounded-lg bg-blue-700/10 flex items-center justify-center flex-shrink-0">
+                      <info.icon className="h-6 w-6 text-blue-700" />
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground">{info.label}</p>
-                      <p className="text-foreground font-medium">{info.value}</p>
+                      <p className="text-sm text-slate-600">{info.label}</p>
+                      <p className="text-slate-800 font-medium">{info.value}</p>
                     </div>
                   </div>
                 ))}
