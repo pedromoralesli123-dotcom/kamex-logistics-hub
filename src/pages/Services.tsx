@@ -1,6 +1,9 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Truck, Package, Building2, MapPin, Warehouse, Route, ArrowRight, CheckCircle } from 'lucide-react';
+import { 
+  Truck, Package, Building2, MapPin, Warehouse, Route, ArrowRight, CheckCircle,
+  Box, Timer, Target, TrendingUp, Shield, Radio, Map
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Services = () => {
@@ -45,6 +48,74 @@ const Services = () => {
     },
   ];
 
+  const scopeOfServices = [
+    'Box truck freight delivery',
+    'Metropolitan and regional route coverage',
+    'Time-sensitive and scheduled deliveries',
+    'Zone-based route execution',
+    'Real-time dispatch coordination',
+  ];
+
+  const performanceHighlights = [
+    'Long-term contract fulfillment',
+    'High on-time delivery performance',
+    'Zero-tolerance safety compliance culture',
+    'Proven scalability during peak demand periods',
+  ];
+
+  const serviceCategories = [
+    {
+      title: 'Freight & Logistics Delivery',
+      icon: Truck,
+      items: [
+        {
+          name: 'Local & Regional Freight',
+          desc: 'Scheduled and time-sensitive deliveries with box-truck operations, route control, and on-time performance.',
+        },
+        {
+          name: 'Contracted Logistics Services',
+          desc: 'End-to-end supply chain support aligned with SLAs and operational benchmarks.',
+        },
+        {
+          name: 'Solo & Team Driver Operations',
+          desc: 'Flexible delivery solutions, including single-driver routes and team-driver coverage for extended or high-volume operations.',
+        },
+      ],
+    },
+    {
+      title: 'Specialty Delivery',
+      icon: Package,
+      items: [
+        {
+          name: 'White Glove Services',
+          desc: 'Careful handling, inside delivery, and placement of high-value, sensitive, or specialized freight.',
+        },
+        {
+          name: 'Commercial Moving Services',
+          desc: 'Structured moving solutions for offices, equipment, or enterprise relocations, executed safely and efficiently.',
+        },
+      ],
+    },
+    {
+      title: 'Operational Excellence',
+      icon: Target,
+      items: [
+        {
+          name: 'Real-Time Dispatch & Route Management',
+          desc: 'Continuous monitoring, communication, and rapid issue resolution.',
+        },
+        {
+          name: 'Zone Mapping & Route Control',
+          desc: 'Advanced route planning to ensure efficiency, accuracy, and predictable outcomes.',
+        },
+        {
+          name: 'Safety & Compliance',
+          desc: 'Full adherence to highway regulations, safety protocols, and partner requirements.',
+        },
+      ],
+    },
+  ];
+
   return (
     <div className="pt-20">
       {/* Hero Banner */}
@@ -61,9 +132,125 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Services We Provide - Main Intro */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <span className="text-blue-700 font-semibold text-sm uppercase tracking-wider">
+              What We Offer
+            </span>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-800 mt-2 mb-6">
+              Services We Provide
+            </h2>
+            <p className="text-slate-600 text-lg leading-relaxed">
+              We deliver comprehensive freight, logistics, and specialty services for enterprise partners and commercial clients. 
+              With 15+ years of experience, we operate with precision, reliability, and strict compliance standards across 
+              metropolitan and regional markets.
+            </p>
+          </div>
+
+          {/* Service Categories */}
+          <div className="space-y-12">
+            {serviceCategories.map((category, index) => (
+              <div key={index} className="bg-slate-50 rounded-2xl p-8 md:p-10">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-14 h-14 rounded-xl bg-blue-700 flex items-center justify-center">
+                    <category.icon className="h-7 w-7 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-heading font-bold text-slate-800">
+                    {category.title}
+                  </h3>
+                </div>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {category.items.map((item, idx) => (
+                    <div key={idx} className="bg-white p-6 rounded-xl border border-slate-200">
+                      <h4 className="text-lg font-heading font-bold text-slate-800 mb-2">
+                        {item.name}
+                      </h4>
+                      <p className="text-slate-600 text-sm leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Scope & Performance */}
+      <section className="section-padding bg-gray-100">
+        <div className="container-custom">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Scope of Services */}
+            <div className="bg-white p-8 rounded-2xl card-shadow">
+              <div className="flex items-center gap-3 mb-6">
+                <Box className="h-8 w-8 text-blue-700" />
+                <h3 className="text-2xl font-heading font-bold text-slate-800">
+                  Scope of Services
+                </h3>
+              </div>
+              <ul className="space-y-4">
+                {scopeOfServices.map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-blue-700 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Performance Highlights */}
+            <div className="bg-white p-8 rounded-2xl card-shadow">
+              <div className="flex items-center gap-3 mb-6">
+                <TrendingUp className="h-8 w-8 text-blue-700" />
+                <h3 className="text-2xl font-heading font-bold text-slate-800">
+                  Performance Highlights
+                </h3>
+              </div>
+              <ul className="space-y-4">
+                {performanceHighlights.map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-blue-700 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Operational Standards */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <Shield className="h-10 w-10 text-blue-700" />
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-800">
+                Operational Standards
+              </h2>
+            </div>
+            <p className="text-slate-600 text-lg leading-relaxed">
+              Each contract is supported by structured dispatch oversight, compliance monitoring, and continuous performance evaluation. 
+              Our approach ensures reliability, transparency, and alignment with partner expectations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Original Services Grid */}
       <section className="section-padding bg-slate-50">
         <div className="container-custom">
+          <div className="text-center mb-12">
+            <span className="text-blue-700 font-semibold text-sm uppercase tracking-wider">
+              Full Service List
+            </span>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-800 mt-2">
+              All Our Services
+            </h2>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div

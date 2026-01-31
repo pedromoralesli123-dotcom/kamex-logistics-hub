@@ -1,7 +1,9 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import { CheckCircle } from 'lucide-react';
 import truckBox from '@/assets/truck-box.jpeg';
 import truckCab from '@/assets/truck-cab.jpeg';
 import heroHome from '@/assets/hero-home.png';
+import ClientLogosCarousel from '@/components/ClientLogosCarousel';
 
 const Portfolio = () => {
   const { t } = useLanguage();
@@ -31,6 +33,17 @@ const Portfolio = () => {
     { value: 'GPS', label: 'Tracked' },
   ];
 
+  const contractExperience = [
+    {
+      name: 'Amazon PIP',
+      description: 'Local and regional freight distribution with performance-based service standards',
+    },
+    {
+      name: 'Microsoft',
+      description: 'Scheduled freight deliveries requiring precision, security, and compliance',
+    },
+  ];
+
   return (
     <div className="pt-20">
       {/* Hero Banner */}
@@ -41,14 +54,58 @@ const Portfolio = () => {
               {t('portfolio.subtitle')}
             </span>
             <h1 className="text-4xl md:text-5xl font-heading font-bold mt-2">
-              {t('portfolio.title')}
+              Portfolio
             </h1>
-            <p className="text-white/80 text-lg mt-4 max-w-2xl mx-auto">
-              {t('portfolio.desc')}
+            <p className="text-white/80 text-lg mt-4 max-w-3xl mx-auto">
+              Our portfolio reflects over 15 years of successful contract execution supporting metropolitan and regional freight operations. We have partnered with enterprise organizations requiring high reliability, strict compliance, and consistent performance across complex delivery environments.
             </p>
           </div>
         </div>
       </section>
+
+      {/* Contract Experience Section */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="text-blue-700 font-semibold text-sm uppercase tracking-wider">
+                Experience
+              </span>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-800 mt-2">
+                Contract Experience
+              </h2>
+              <p className="text-slate-600 text-lg mt-4">
+                We have supported and completed contracted delivery services for:
+              </p>
+            </div>
+
+            {/* Contract List */}
+            <div className="space-y-6 mb-10">
+              {contractExperience.map((contract, index) => (
+                <div
+                  key={index}
+                  className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl border-l-4 border-blue-700"
+                >
+                  <CheckCircle className="h-6 w-6 text-blue-700 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="text-xl font-heading font-bold text-slate-800">
+                      {contract.name}
+                    </h3>
+                    <p className="text-slate-600 mt-1">{contract.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-center text-slate-600 text-lg italic">
+              These engagements required adherence to strict service-level agreements, safety protocols, and operational benchmarks.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Client Logos Carousel */}
+      <ClientLogosCarousel />
 
       {/* Fleet Stats */}
       <section className="py-12 bg-gray-100">

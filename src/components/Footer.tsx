@@ -62,6 +62,10 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h4 className="font-heading font-bold text-lg mb-6">{t('footer.contact')}</h4>
+            {/* Tagline */}
+            <p className="text-white/70 text-sm italic mb-4 leading-relaxed">
+              "Professional, scalable, and contract-ready delivery solutions you can rely on."
+            </p>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-yellow-400 flex-shrink-0 mt-0.5" />

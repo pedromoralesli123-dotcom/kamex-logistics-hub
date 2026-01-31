@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import WhyChooseUsSection from '@/components/WhyChooseUsSection';
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -67,6 +68,9 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUsSection />
 
       {/* Contact Section */}
       <section className="section-padding bg-slate-50">
