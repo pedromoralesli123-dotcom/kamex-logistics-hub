@@ -15,7 +15,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-slate-800 text-white relative overflow-hidden isolate">
+    <footer className="bg-slate-800 text-white relative overflow-hidden isolate" style={{ transform: 'translateZ(0)', backfaceVisibility: 'hidden' }}>
       <div className="container-custom section-padding pb-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Logo & Description */}
