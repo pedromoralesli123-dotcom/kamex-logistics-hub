@@ -9,39 +9,28 @@ const Portfolio = () => {
   const { t } = useLanguage();
 
   const fleetImages = [
-    {
-      src: truckBox,
-      alt: '26-foot box truck for freight transportation',
-      category: 'Box Trucks',
-    },
-    {
-      src: truckCab,
-      alt: 'Freightliner truck cab',
-      category: 'Fleet Vehicles',
-    },
-    {
-      src: heroHome,
-      alt: 'Professional driver with Kamex truck',
-      category: 'Our Team',
-    },
+    { src: truckBox, alt: '26-foot box truck for freight transportation', categoryKey: 'portfolio.cat.boxtrucks' },
+    { src: truckCab, alt: 'Freightliner truck cab', categoryKey: 'portfolio.cat.fleet' },
+    { src: heroHome, alt: 'Professional driver with Kamex truck', categoryKey: 'portfolio.cat.team' },
   ];
 
   const fleetStats = [
-    { value: '26ft', label: 'Box Trucks' },
-    { value: '5+', label: 'Vehicles' },
-    { value: 'DOT', label: 'Certified' },
-    { value: 'GPS', label: 'Tracked' },
+    { value: '26ft', labelKey: 'portfolio.stats.boxtrucks' },
+    { value: '5+', labelKey: 'portfolio.stats.vehicles' },
+    { value: 'DOT', labelKey: 'portfolio.stats.certified' },
+    { value: 'GPS', labelKey: 'portfolio.stats.tracked' },
   ];
 
   const contractExperience = [
-    {
-      name: 'Amazon PIP',
-      description: 'Local and regional freight distribution with performance-based service standards',
-    },
-    {
-      name: 'Microsoft',
-      description: 'Scheduled freight deliveries requiring precision, security, and compliance',
-    },
+    { name: 'Amazon PIP', descKey: 'portfolio.experience.amazon' },
+    { name: 'Microsoft', descKey: 'portfolio.experience.microsoft' },
+  ];
+
+  const equipSpecs = [
+    { labelKey: 'portfolio.equip.liftgate', valKey: 'portfolio.equip.liftgate.val' },
+    { labelKey: 'portfolio.equip.capacity', valKey: 'portfolio.equip.capacity.val' },
+    { labelKey: 'portfolio.equip.cargo', valKey: 'portfolio.equip.cargo.val' },
+    { labelKey: 'portfolio.equip.insurance', valKey: 'portfolio.equip.insurance.val' },
   ];
 
   return (
@@ -54,10 +43,10 @@ const Portfolio = () => {
               {t('portfolio.subtitle')}
             </span>
             <h1 className="text-4xl md:text-5xl font-heading font-bold mt-2">
-              Portfolio
+              {t('portfolio.title')}
             </h1>
             <p className="text-white/80 text-lg mt-4 max-w-3xl mx-auto">
-              Our portfolio reflects over 15 years of successful contract execution supporting metropolitan and regional freight operations. We have partnered with enterprise organizations requiring high reliability, strict compliance, and consistent performance across complex delivery environments.
+              {t('portfolio.intro')}
             </p>
           </div>
         </div>
@@ -69,42 +58,35 @@ const Portfolio = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <span className="text-blue-700 font-semibold text-sm uppercase tracking-wider">
-                Experience
+                {t('portfolio.experience.badge')}
               </span>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-800 mt-2">
-                Contract Experience
+                {t('portfolio.experience.title')}
               </h2>
               <p className="text-slate-600 text-lg mt-4">
-                We have supported and completed contracted delivery services for:
+                {t('portfolio.experience.subtitle')}
               </p>
             </div>
 
-            {/* Contract List */}
             <div className="space-y-6 mb-10">
               {contractExperience.map((contract, index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl border-l-4 border-blue-700"
-                >
+                <div key={index} className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl border-l-4 border-blue-700">
                   <CheckCircle className="h-6 w-6 text-blue-700 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="text-xl font-heading font-bold text-slate-800">
-                      {contract.name}
-                    </h3>
-                    <p className="text-slate-600 mt-1">{contract.description}</p>
+                    <h3 className="text-xl font-heading font-bold text-slate-800">{contract.name}</h3>
+                    <p className="text-slate-600 mt-1">{t(contract.descKey)}</p>
                   </div>
                 </div>
               ))}
             </div>
 
             <p className="text-center text-slate-600 text-lg italic">
-              These engagements required adherence to strict service-level agreements, safety protocols, and operational benchmarks.
+              {t('portfolio.experience.closing')}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Client Logos Carousel */}
       <ClientLogosCarousel />
 
       {/* Fleet Stats */}
@@ -112,12 +94,9 @@ const Portfolio = () => {
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {fleetStats.map((stat, index) => (
-              <div
-                key={index}
-                className="text-center p-6 bg-white rounded-xl card-shadow"
-              >
+              <div key={index} className="text-center p-6 bg-white rounded-xl card-shadow">
                 <div className="text-3xl font-bold text-blue-700 mb-1">{stat.value}</div>
-                <div className="text-sm text-slate-600">{stat.label}</div>
+                <div className="text-sm text-slate-600">{t(stat.labelKey)}</div>
               </div>
             ))}
           </div>
@@ -135,19 +114,12 @@ const Portfolio = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {fleetImages.map((image, index) => (
-              <div
-                key={index}
-                className="group relative rounded-2xl overflow-hidden card-shadow hover:card-shadow-hover transition-all duration-300"
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+              <div key={index} className="group relative rounded-2xl overflow-hidden card-shadow hover:card-shadow-hover transition-all duration-300">
+                <img src={image.src} alt={image.alt} className="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-800/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   <span className="inline-block px-3 py-1 bg-yellow-400 text-slate-800 text-sm rounded-full mb-2">
-                    {image.category}
+                    {t(image.categoryKey)}
                   </span>
                   <p className="text-white font-medium">{image.alt}</p>
                 </div>
@@ -169,25 +141,16 @@ const Portfolio = () => {
                 {t('portfolio.equipment.description')}
               </p>
               <div className="grid grid-cols-2 gap-4">
-                {[
-                  { label: 'Lift Gate', value: 'Available' },
-                  { label: 'Load Capacity', value: '10,000 lbs' },
-                  { label: 'Cargo Space', value: '1,800 cu ft' },
-                  { label: 'Insurance', value: 'Full Coverage' },
-                ].map((spec, index) => (
+                {equipSpecs.map((spec, index) => (
                   <div key={index} className="bg-white p-4 rounded-xl">
-                    <div className="text-sm text-slate-600">{spec.label}</div>
-                    <div className="font-bold text-slate-800">{spec.value}</div>
+                    <div className="text-sm text-slate-600">{t(spec.labelKey)}</div>
+                    <div className="font-bold text-slate-800">{t(spec.valKey)}</div>
                   </div>
                 ))}
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden card-shadow">
-              <img
-                src={truckBox}
-                alt="26-foot box truck specifications"
-                className="w-full h-[400px] object-cover"
-              />
+              <img src={truckBox} alt="26-foot box truck specifications" className="w-full h-[400px] object-cover" />
             </div>
           </div>
         </div>

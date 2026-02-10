@@ -64,7 +64,7 @@ const Footer = () => {
             <h4 className="font-heading font-bold text-lg mb-6">{t('footer.contact')}</h4>
             {/* Tagline */}
             <p className="text-white/70 text-sm italic mb-4 leading-relaxed">
-              "Professional, scalable, and contract-ready delivery solutions you can rely on."
+              {t('footer.contactTagline')}
             </p>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">

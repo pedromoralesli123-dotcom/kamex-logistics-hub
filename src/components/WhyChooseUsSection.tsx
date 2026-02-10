@@ -1,59 +1,30 @@
 import { Award, Shield, Radio, FileCheck, Map, Users } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const WhyChooseUsSection = () => {
+  const { t } = useLanguage();
+
   const features = [
-    {
-      icon: Award,
-      title: 'Proven Contract Performance',
-      description:
-        'With over 15 years of experience, we have successfully executed and sustained delivery contracts in metropolitan and regional markets, meeting strict service-level, safety, and performance requirements.',
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise-Level Reliability',
-      description:
-        'Our operations are built around consistency and accountability. We understand that missed deliveries impact downstream operations, which is why reliability is embedded into every process we run.',
-    },
-    {
-      icon: Radio,
-      title: 'Real-Time Dispatch & Visibility',
-      description:
-        'We utilize real-time dispatch coordination and monitoring to maintain route control, rapid issue resolution, and clear communication throughout the delivery lifecycle.',
-    },
-    {
-      icon: FileCheck,
-      title: 'Safety & Compliance First',
-      description:
-        'We operate under strict highway safety standards and regulatory compliance protocols, reducing operational risk and ensuring dependable service for our partners.',
-    },
-    {
-      icon: Map,
-      title: 'Zone Mapping & Route Control',
-      description:
-        'Our zone-based mapping and route optimization systems allow us to maintain efficiency, predictability, and coverage accuracy across all service areas.',
-    },
-    {
-      icon: Users,
-      title: 'Family-Owned, Professionally Operated',
-      description:
-        'While family-owned, we operate with the structure, discipline, and performance standards expected by enterprise-level partners such as Amazon PIP and Microsoft.',
-    },
+    { icon: Award, titleKey: 'whychoose.proven.title', descKey: 'whychoose.proven.desc' },
+    { icon: Shield, titleKey: 'whychoose.reliability.title', descKey: 'whychoose.reliability.desc' },
+    { icon: Radio, titleKey: 'whychoose.dispatch.title', descKey: 'whychoose.dispatch.desc' },
+    { icon: FileCheck, titleKey: 'whychoose.safety.title', descKey: 'whychoose.safety.desc' },
+    { icon: Map, titleKey: 'whychoose.zone.title', descKey: 'whychoose.zone.desc' },
+    { icon: Users, titleKey: 'whychoose.family.title', descKey: 'whychoose.family.desc' },
   ];
 
   return (
     <section className="section-padding bg-white">
       <div className="container-custom">
-        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-blue-700 font-semibold text-sm uppercase tracking-wider">
-            Our Commitment
+            {t('whychoose.badge')}
           </span>
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-800 mt-2">
-            Why Choose Us
+            {t('whychoose.title')}
           </h2>
         </div>
 
-        {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
@@ -64,10 +35,10 @@ const WhyChooseUsSection = () => {
                 <feature.icon className="h-7 w-7 text-blue-700 group-hover:text-white transition-colors" />
               </div>
               <h3 className="text-xl font-heading font-bold text-slate-800 group-hover:text-white mb-3 transition-colors">
-                {feature.title}
+                {t(feature.titleKey)}
               </h3>
               <p className="text-slate-600 group-hover:text-white/90 leading-relaxed transition-colors">
-                {feature.description}
+                {t(feature.descKey)}
               </p>
             </div>
           ))}
