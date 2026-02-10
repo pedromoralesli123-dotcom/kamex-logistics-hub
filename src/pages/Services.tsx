@@ -2,7 +2,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { 
   Truck, Package, Building2, MapPin, Warehouse, Route, ArrowRight, CheckCircle,
-  Box, Timer, Target, TrendingUp, Shield, Radio, Map
+  Box, TrendingUp, Shield, Target
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -14,104 +14,68 @@ const Services = () => {
       icon: Truck,
       title: t('services.freight.title'),
       description: t('services.freight.desc'),
-      features: ['Local & Regional Coverage', 'Same-day Delivery', 'Scheduled Pickups'],
+      features: ['services.features.local', 'services.features.sameday', 'services.features.scheduled'],
     },
     {
       icon: Package,
       title: t('services.distribution.title'),
       description: t('services.distribution.desc'),
-      features: ['Multi-stop Routes', 'Cross-docking', 'Inventory Management'],
+      features: ['services.features.multistop', 'services.features.crossdock', 'services.features.inventory'],
     },
     {
       icon: Building2,
       title: t('services.government.title'),
       description: t('services.government.desc'),
-      features: ['GSA Certified', 'Federal Contracts', 'State & Local'],
+      features: ['services.features.gsa', 'services.features.federal', 'services.features.statelocal'],
     },
     {
       icon: MapPin,
       title: t('services.lastmile.title'),
       description: t('services.lastmile.desc'),
-      features: ['White Glove Service', 'Inside Delivery', 'POD Confirmation'],
+      features: ['services.features.whiteglove', 'services.features.inside', 'services.features.pod'],
     },
     {
       icon: Warehouse,
       title: t('services.warehouse.title'),
       description: t('services.warehouse.desc'),
-      features: ['Short-term Storage', 'Pick & Pack', 'Order Fulfillment'],
+      features: ['services.features.shortstorage', 'services.features.pickpack', 'services.features.fulfillment'],
     },
     {
       icon: Route,
       title: t('services.dedicated.title'),
       description: t('services.dedicated.desc'),
-      features: ['Dedicated Drivers', 'Fixed Schedules', 'Custom Solutions'],
+      features: ['services.features.drivers', 'services.features.fixedschedules', 'services.features.custom'],
     },
   ];
 
-  const scopeOfServices = [
-    'Box truck freight delivery',
-    'Metropolitan and regional route coverage',
-    'Time-sensitive and scheduled deliveries',
-    'Zone-based route execution',
-    'Real-time dispatch coordination',
-  ];
-
-  const performanceHighlights = [
-    'Long-term contract fulfillment',
-    'High on-time delivery performance',
-    'Zero-tolerance safety compliance culture',
-    'Proven scalability during peak demand periods',
-  ];
+  const scopeKeys = ['services.scope.1', 'services.scope.2', 'services.scope.3', 'services.scope.4', 'services.scope.5'];
+  const perfKeys = ['services.perf.1', 'services.perf.2', 'services.perf.3', 'services.perf.4'];
 
   const serviceCategories = [
     {
-      title: 'Freight & Logistics Delivery',
+      titleKey: 'services.cat.freight',
       icon: Truck,
       items: [
-        {
-          name: 'Local & Regional Freight',
-          desc: 'Scheduled and time-sensitive deliveries with box-truck operations, route control, and on-time performance.',
-        },
-        {
-          name: 'Contracted Logistics Services',
-          desc: 'End-to-end supply chain support aligned with SLAs and operational benchmarks.',
-        },
-        {
-          name: 'Solo & Team Driver Operations',
-          desc: 'Flexible delivery solutions, including single-driver routes and team-driver coverage for extended or high-volume operations.',
-        },
+        { nameKey: 'services.cat.freight.local', descKey: 'services.cat.freight.local.desc' },
+        { nameKey: 'services.cat.freight.contracted', descKey: 'services.cat.freight.contracted.desc' },
+        { nameKey: 'services.cat.freight.solo', descKey: 'services.cat.freight.solo.desc' },
       ],
     },
     {
-      title: 'Specialty Delivery',
+      titleKey: 'services.cat.specialty',
       icon: Package,
       items: [
-        {
-          name: 'White Glove Services',
-          desc: 'Careful handling, inside delivery, and placement of high-value, sensitive, or specialized freight.',
-        },
-        {
-          name: 'Commercial Moving Services',
-          desc: 'Structured moving solutions for offices, equipment, or enterprise relocations, executed safely and efficiently.',
-        },
+        { nameKey: 'services.cat.specialty.whiteglove', descKey: 'services.cat.specialty.whiteglove.desc' },
+        { nameKey: 'services.cat.specialty.commercial', descKey: 'services.cat.specialty.commercial.desc' },
       ],
     },
     {
-      title: 'Operational Excellence',
+      titleKey: 'services.cat.operational',
       icon: Target,
       items: [
-        {
-          name: 'Real-Time Dispatch & Route Management',
-          desc: 'Continuous monitoring, communication, and rapid issue resolution.',
-        },
-        {
-          name: 'Zone Mapping & Route Control',
-          desc: 'Advanced route planning to ensure efficiency, accuracy, and predictable outcomes.',
-        },
-        {
-          name: 'Safety & Compliance',
-          desc: 'Full adherence to highway regulations, safety protocols, and partner requirements.',
-        },
+        { nameKey: 'services.cat.operational.dispatch', descKey: 'services.cat.operational.dispatch.desc' },
+        { nameKey: 'services.cat.operational.zone', descKey: 'services.cat.operational.zone.desc' },
+        { nameKey: 'services.cat.operational.safety', descKey: 'services.cat.operational.safety.desc' },
       ],
     },
   ];
@@ -132,24 +96,21 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services We Provide - Main Intro */}
+      {/* Services We Provide */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <span className="text-blue-700 font-semibold text-sm uppercase tracking-wider">
-              What We Offer
+              {t('services.provide.badge')}
             </span>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-800 mt-2 mb-6">
-              Services We Provide
+              {t('services.provide.title')}
             </h2>
             <p className="text-slate-600 text-lg leading-relaxed">
-              We deliver comprehensive freight, logistics, and specialty services for enterprise partners and commercial clients. 
-              With 15+ years of experience, we operate with precision, reliability, and strict compliance standards across 
-              metropolitan and regional markets.
+              {t('services.provide.desc')}
             </p>
           </div>
 
-          {/* Service Categories */}
           <div className="space-y-12">
             {serviceCategories.map((category, index) => (
               <div key={index} className="bg-slate-50 rounded-2xl p-8 md:p-10">
@@ -158,17 +119,17 @@ const Services = () => {
                     <category.icon className="h-7 w-7 text-white" />
                   </div>
                   <h3 className="text-2xl font-heading font-bold text-slate-800">
-                    {category.title}
+                    {t(category.titleKey)}
                   </h3>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.items.map((item, idx) => (
                     <div key={idx} className="bg-white p-6 rounded-xl border border-slate-200">
                       <h4 className="text-lg font-heading font-bold text-slate-800 mb-2">
-                        {item.name}
+                        {t(item.nameKey)}
                       </h4>
                       <p className="text-slate-600 text-sm leading-relaxed">
-                        {item.desc}
+                        {t(item.descKey)}
                       </p>
                     </div>
                   ))}
@@ -183,37 +144,35 @@ const Services = () => {
       <section className="section-padding bg-gray-100">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Scope of Services */}
             <div className="bg-white p-8 rounded-2xl card-shadow">
               <div className="flex items-center gap-3 mb-6">
                 <Box className="h-8 w-8 text-blue-700" />
                 <h3 className="text-2xl font-heading font-bold text-slate-800">
-                  Scope of Services
+                  {t('services.scope.title')}
                 </h3>
               </div>
               <ul className="space-y-4">
-                {scopeOfServices.map((item, index) => (
+                {scopeKeys.map((key, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-blue-700 flex-shrink-0 mt-0.5" />
-                    <span className="text-slate-600">{item}</span>
+                    <span className="text-slate-600">{t(key)}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Performance Highlights */}
             <div className="bg-white p-8 rounded-2xl card-shadow">
               <div className="flex items-center gap-3 mb-6">
                 <TrendingUp className="h-8 w-8 text-blue-700" />
                 <h3 className="text-2xl font-heading font-bold text-slate-800">
-                  Performance Highlights
+                  {t('services.perf.title')}
                 </h3>
               </div>
               <ul className="space-y-4">
-                {performanceHighlights.map((item, index) => (
+                {perfKeys.map((key, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-blue-700 flex-shrink-0 mt-0.5" />
-                    <span className="text-slate-600">{item}</span>
+                    <span className="text-slate-600">{t(key)}</span>
                   </li>
                 ))}
               </ul>
@@ -229,12 +188,11 @@ const Services = () => {
             <div className="flex items-center justify-center gap-3 mb-6">
               <Shield className="h-10 w-10 text-blue-700" />
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-800">
-                Operational Standards
+                {t('services.standards.title')}
               </h2>
             </div>
             <p className="text-slate-600 text-lg leading-relaxed">
-              Each contract is supported by structured dispatch oversight, compliance monitoring, and continuous performance evaluation. 
-              Our approach ensures reliability, transparency, and alignment with partner expectations.
+              {t('services.standards.desc')}
             </p>
           </div>
         </div>
@@ -245,10 +203,10 @@ const Services = () => {
         <div className="container-custom">
           <div className="text-center mb-12">
             <span className="text-blue-700 font-semibold text-sm uppercase tracking-wider">
-              Full Service List
+              {t('services.fulllist.badge')}
             </span>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-800 mt-2">
-              All Our Services
+              {t('services.fulllist.title')}
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -267,10 +225,10 @@ const Services = () => {
                   {service.description}
                 </p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
+                  {service.features.map((featureKey, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-sm text-slate-600">
                       <CheckCircle className="h-4 w-4 text-blue-700 flex-shrink-0" />
-                      {feature}
+                      {t(featureKey)}
                     </li>
                   ))}
                 </ul>
