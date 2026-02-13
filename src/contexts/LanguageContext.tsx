@@ -44,7 +44,15 @@ const translations: Record<Language, Record<string, string>> = {
     'about.values.excellence.title': 'Excellence',
     'about.values.excellence.desc': 'We strive for excellence in every delivery, maintaining the highest standards of service.',
     'about.fleet.title': 'Our Fleet',
-    'about.fleet.description': 'Our fleet of 26-foot box trucks is equipped with the latest technology and maintained to the highest standards for reliable service.',
+    'about.fleet.description': 'We operate a versatile fleet of 4 vehicle types — from compact cargo vans for urban last-mile delivery to full-size 26-foot box trucks for high-volume freight. Every unit is GPS-tracked, fully insured, and DOT certified.',
+    'about.fleet.item.cab': 'Truck Cab — Heavy-duty semi tractor for long-haul & regional towing',
+    'about.fleet.item.van': 'Cargo Van — Agile last-mile & time-sensitive urban deliveries',
+    'about.fleet.item.16ft': '16 ft Box Truck — Medium freight, multi-stop commercial routes',
+    'about.fleet.item.26ft': '26 ft Box Truck — Large freight & high-volume contracted logistics',
+    'about.fleet.dot': 'DOT Certified',
+    'about.fleet.gps': 'GPS Tracked',
+    'about.fleet.insured': 'Fully Insured',
+    'about.fleet.types': '4 Vehicle Types',
     
     // Services
     'services.title': 'Our Services',
@@ -263,7 +271,15 @@ const translations: Record<Language, Record<string, string>> = {
     'about.values.excellence.title': 'Excelencia',
     'about.values.excellence.desc': 'Nos esforzamos por la excelencia en cada entrega, manteniendo los más altos estándares de servicio.',
     'about.fleet.title': 'Nuestra Flota',
-    'about.fleet.description': 'Nuestra flota de camiones de 26 pies está equipada con la última tecnología y mantenida con los más altos estándares para un servicio confiable.',
+    'about.fleet.description': 'Operamos una flota versátil de 4 tipos de vehículos — desde cargo vans compactas para entregas urbanas de última milla hasta camiones de 26 pies para operaciones de carga de alto volumen. Cada unidad cuenta con GPS, seguro completo y certificación DOT.',
+    'about.fleet.item.cab': 'Truck Cab — Tractocamión de servicio pesado para arrastre regional y de larga distancia',
+    'about.fleet.item.van': 'Cargo Van — Entregas ágiles de última milla y rutas urbanas sensibles al tiempo',
+    'about.fleet.item.16ft': '16 ft Box Truck — Carga mediana y rutas comerciales de múltiples paradas',
+    'about.fleet.item.26ft': '26 ft Box Truck — Carga grande y logística contratada de alto volumen',
+    'about.fleet.dot': 'Certificación DOT',
+    'about.fleet.gps': 'Rastreo GPS',
+    'about.fleet.insured': 'Seguro Completo',
+    'about.fleet.types': '4 Tipos de Vehículos',
     
     // Services
     'services.title': 'Nuestros Servicios',
