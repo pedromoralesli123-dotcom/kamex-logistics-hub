@@ -1,22 +1,64 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Truck, Package, Ruler, Weight, Gauge, Shield } from 'lucide-react';
 import truckBox from '@/assets/truck-box.jpeg';
 import truckCab from '@/assets/truck-cab.jpeg';
-import heroHome from '@/assets/hero-home.png';
+import cargoVan from '@/assets/cargo-van.jpg';
+import truck16ft from '@/assets/truck-16ft.jpg';
 import ClientLogosCarousel from '@/components/ClientLogosCarousel';
 
 const Portfolio = () => {
   const { t } = useLanguage();
 
-  const fleetImages = [
-    { src: truckBox, alt: '26-foot box truck for freight transportation', categoryKey: 'portfolio.cat.boxtrucks' },
-    { src: truckCab, alt: 'Freightliner truck cab', categoryKey: 'portfolio.cat.fleet' },
-    { src: heroHome, alt: 'Professional driver with Kamex truck', categoryKey: 'portfolio.cat.team' },
+  const fleetUnits = [
+    {
+      image: truckCab,
+      nameKey: 'portfolio.unit.cab.name',
+      descKey: 'portfolio.unit.cab.desc',
+      specs: [
+        { icon: Truck, labelKey: 'portfolio.spec.type', valKey: 'portfolio.unit.cab.type' },
+        { icon: Weight, labelKey: 'portfolio.spec.payload', valKey: 'portfolio.unit.cab.payload' },
+        { icon: Gauge, labelKey: 'portfolio.spec.engine', valKey: 'portfolio.unit.cab.engine' },
+        { icon: Shield, labelKey: 'portfolio.spec.features', valKey: 'portfolio.unit.cab.features' },
+      ],
+    },
+    {
+      image: cargoVan,
+      nameKey: 'portfolio.unit.van.name',
+      descKey: 'portfolio.unit.van.desc',
+      specs: [
+        { icon: Truck, labelKey: 'portfolio.spec.type', valKey: 'portfolio.unit.van.type' },
+        { icon: Ruler, labelKey: 'portfolio.spec.cargo', valKey: 'portfolio.unit.van.cargo' },
+        { icon: Weight, labelKey: 'portfolio.spec.payload', valKey: 'portfolio.unit.van.payload' },
+        { icon: Shield, labelKey: 'portfolio.spec.features', valKey: 'portfolio.unit.van.features' },
+      ],
+    },
+    {
+      image: truck16ft,
+      nameKey: 'portfolio.unit.16ft.name',
+      descKey: 'portfolio.unit.16ft.desc',
+      specs: [
+        { icon: Truck, labelKey: 'portfolio.spec.type', valKey: 'portfolio.unit.16ft.type' },
+        { icon: Ruler, labelKey: 'portfolio.spec.cargo', valKey: 'portfolio.unit.16ft.cargo' },
+        { icon: Weight, labelKey: 'portfolio.spec.payload', valKey: 'portfolio.unit.16ft.payload' },
+        { icon: Shield, labelKey: 'portfolio.spec.features', valKey: 'portfolio.unit.16ft.features' },
+      ],
+    },
+    {
+      image: truckBox,
+      nameKey: 'portfolio.unit.26ft.name',
+      descKey: 'portfolio.unit.26ft.desc',
+      specs: [
+        { icon: Truck, labelKey: 'portfolio.spec.type', valKey: 'portfolio.unit.26ft.type' },
+        { icon: Ruler, labelKey: 'portfolio.spec.cargo', valKey: 'portfolio.unit.26ft.cargo' },
+        { icon: Weight, labelKey: 'portfolio.spec.payload', valKey: 'portfolio.unit.26ft.payload' },
+        { icon: Shield, labelKey: 'portfolio.spec.features', valKey: 'portfolio.unit.26ft.features' },
+      ],
+    },
   ];
 
   const fleetStats = [
-    { value: '26ft', labelKey: 'portfolio.stats.boxtrucks' },
-    { value: '5+', labelKey: 'portfolio.stats.vehicles' },
+    { value: '4', labelKey: 'portfolio.stats.types' },
+    { value: '10+', labelKey: 'portfolio.stats.vehicles' },
     { value: 'DOT', labelKey: 'portfolio.stats.certified' },
     { value: 'GPS', labelKey: 'portfolio.stats.tracked' },
   ];
@@ -24,13 +66,6 @@ const Portfolio = () => {
   const contractExperience = [
     { name: 'Amazon PIP', descKey: 'portfolio.experience.amazon' },
     { name: 'Microsoft', descKey: 'portfolio.experience.microsoft' },
-  ];
-
-  const equipSpecs = [
-    { labelKey: 'portfolio.equip.liftgate', valKey: 'portfolio.equip.liftgate.val' },
-    { labelKey: 'portfolio.equip.capacity', valKey: 'portfolio.equip.capacity.val' },
-    { labelKey: 'portfolio.equip.cargo', valKey: 'portfolio.equip.cargo.val' },
-    { labelKey: 'portfolio.equip.insurance', valKey: 'portfolio.equip.insurance.val' },
   ];
 
   return (
@@ -103,55 +138,69 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Fleet Gallery */}
+      {/* Fleet Units — Specs Section */}
       <section className="section-padding bg-slate-50">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-800">
-              {t('portfolio.gallery.title')}
+          <div className="text-center mb-14">
+            <span className="text-blue-700 font-semibold text-sm uppercase tracking-wider">
+              {t('portfolio.fleet.badge')}
+            </span>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-800 mt-2">
+              {t('portfolio.fleet.title')}
             </h2>
+            <p className="text-slate-600 text-lg mt-4 max-w-2xl mx-auto">
+              {t('portfolio.fleet.desc')}
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {fleetImages.map((image, index) => (
-              <div key={index} className="group relative rounded-2xl overflow-hidden card-shadow hover:card-shadow-hover transition-all duration-300">
-                <img src={image.src} alt={image.alt} className="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-800/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <span className="inline-block px-3 py-1 bg-yellow-400 text-slate-800 text-sm rounded-full mb-2">
-                    {t(image.categoryKey)}
-                  </span>
-                  <p className="text-white font-medium">{image.alt}</p>
+          <div className="grid md:grid-cols-2 gap-8">
+            {fleetUnits.map((unit, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl overflow-hidden card-shadow hover:card-shadow-hover transition-all duration-300 flex flex-col"
+              >
+                {/* Image */}
+                <div className="relative overflow-hidden">
+                  <img
+                    src={unit.image}
+                    alt={t(unit.nameKey)}
+                    className="w-full h-[260px] object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="inline-block px-3 py-1 bg-blue-700 text-white text-xs font-semibold rounded-full uppercase tracking-wide">
+                      {t(unit.nameKey)}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Info */}
+                <div className="p-6 flex-1 flex flex-col">
+                  <h3 className="text-xl font-heading font-bold text-slate-800 mb-2">
+                    {t(unit.nameKey)}
+                  </h3>
+                  <p className="text-slate-600 text-sm mb-5 leading-relaxed">
+                    {t(unit.descKey)}
+                  </p>
+
+                  {/* Spec Grid */}
+                  <div className="grid grid-cols-2 gap-3 mt-auto">
+                    {unit.specs.map((spec, si) => (
+                      <div key={si} className="flex items-start gap-2 bg-slate-50 rounded-lg p-3">
+                        <spec.icon className="h-4 w-4 text-blue-700 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <div className="text-[11px] uppercase tracking-wider text-slate-400 font-medium">
+                            {t(spec.labelKey)}
+                          </div>
+                          <div className="text-sm font-semibold text-slate-800">
+                            {t(spec.valKey)}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Equipment Details */}
-      <section className="section-padding bg-gray-100">
-        <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-800 mb-6">
-                {t('portfolio.equipment.title')}
-              </h2>
-              <p className="text-slate-600 text-lg leading-relaxed mb-6">
-                {t('portfolio.equipment.description')}
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                {equipSpecs.map((spec, index) => (
-                  <div key={index} className="bg-white p-4 rounded-xl">
-                    <div className="text-sm text-slate-600">{t(spec.labelKey)}</div>
-                    <div className="font-bold text-slate-800">{t(spec.valKey)}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-2xl overflow-hidden card-shadow">
-              <img src={truckBox} alt="26-foot box truck specifications" className="w-full h-[400px] object-cover" />
-            </div>
           </div>
         </div>
       </section>
