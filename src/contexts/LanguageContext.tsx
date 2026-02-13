@@ -54,6 +54,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.fleet.gps': 'GPS Tracked',
     'about.fleet.insured': 'Fully Insured',
     'about.fleet.types': '4 Vehicle Types',
+    'about.fleet.cta': 'View Our Fleet & Specs',
     
     // Services
     'services.title': 'Our Services',
@@ -281,6 +282,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.fleet.gps': 'Rastreo GPS',
     'about.fleet.insured': 'Seguro Completo',
     'about.fleet.types': '4 Tipos de Vehículos',
+    'about.fleet.cta': 'Ver Nuestra Flota y Especificaciones',
     
     // Services
     'services.title': 'Nuestros Servicios',
