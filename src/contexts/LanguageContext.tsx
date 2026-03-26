@@ -24,7 +24,9 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.title': 'Powering Local Deliveries for Leading Brands',
     'hero.subtitle': 'Supporting Major Partners with Reliable Local Delivery. Professional trucking services for private and government contracts.',
     'hero.cta': 'Request a Quote',
-    'hero.secondary': 'Our Services',
+    'hero.secondary': 'Capability Statement',
+    'hero.download': 'Download',
+    'footer.capability': 'Capability Statement',
     
     // About
     'about.title': 'About Kamex Trucking',
@@ -252,7 +254,9 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.title': 'Impulsando Entregas Locales para Marcas Líderes',
     'hero.subtitle': 'Apoyando a Grandes Socios con Entregas Locales Confiables. Servicios profesionales de transporte para contratos privados y gubernamentales.',
     'hero.cta': 'Solicitar Cotización',
-    'hero.secondary': 'Nuestros Servicios',
+    'hero.secondary': 'Capability Statement',
+    'hero.download': 'Descargar',
+    'footer.capability': 'Capability Statement',
     
     // About
     'about.title': 'Sobre Kamex Trucking',

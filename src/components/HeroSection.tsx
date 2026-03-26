@@ -2,7 +2,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import heroHome from '@/assets/hero-home.png';
 import logo from '@/assets/kamex-logo.png';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
@@ -67,7 +67,10 @@ const HeroSection = () => {
               size="lg"
               asChild
             >
-              <Link to="/services">{t('hero.secondary')}</Link>
+              <a href="/capability-statement.pdf" download>
+                <Download className="mr-2 h-5 w-5" />
+                {t('hero.secondary')}
+              </a>
             </Button>
           </div>
         </div>
