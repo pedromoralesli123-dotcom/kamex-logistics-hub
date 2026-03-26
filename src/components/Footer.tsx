@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import logo from '@/assets/kamex-logo.png';
-import { Facebook, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Linkedin, Instagram, Mail, Phone, MapPin, Download } from 'lucide-react';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -56,6 +56,16 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a
+                  href="/capability-statement.pdf"
+                  download
+                  className="text-white/80 hover:text-yellow-400 transition-colors inline-flex items-center gap-2"
+                >
+                  <Download className="h-4 w-4" />
+                  {t('footer.capability')}
+                </a>
+              </li>
             </ul>
           </div>
 
